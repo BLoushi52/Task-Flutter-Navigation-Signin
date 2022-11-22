@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+String username = "";
+String password = "";
+
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
   final usernameController = TextEditingController();
@@ -59,6 +62,12 @@ class HomeScreen extends StatelessWidget {
             ),
             onPressed: () {
               // Step 8
+              username = usernameController.text.toString();
+              password = passwordController.text.toString();
+
+              password == ("12345")
+                  ? GoRouter.of(context).push('/signin', extra: username)
+                  : null;
             },
             child: const Padding(
               padding: EdgeInsets.all(8.0),
