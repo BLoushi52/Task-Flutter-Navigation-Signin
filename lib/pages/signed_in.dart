@@ -20,7 +20,10 @@ class SignedIn extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Step 9
-            Text("Welcome ${username}"),
+            Text(
+              "Welcome ${username}",
+              style: TextStyle(fontSize: 25),
+            ),
             Icon(
               Icons.check_circle,
               color: Colors.green,
